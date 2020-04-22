@@ -3,3 +3,12 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+.input{
+  margin: 3% 8%;
+}
+
+.movie{
+  margin: 2% 8%;
+  width: 400px;
+}

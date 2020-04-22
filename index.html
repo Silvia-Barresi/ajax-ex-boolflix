@@ -2,15 +2,16 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Boolflix</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/f544440f57.js" crossorigin="anonymous"></script>
   </head>
   <body>
 
-      <input id="search" type="text" name="" value="scrivi un titolo">
-      <button type="button" name="button">Search</button>
-
-
+      <div class="input">
+        <input id="search" type="text" placeholder="scrivi un titolo">
+        <button id="button" type="button" name="button">Search</button>
+      </div>
 
 
 
@@ -20,8 +21,8 @@
       <div class="movie">
         <h3>{{title}}</h3>
         <p>{{original_title}}</p>
-        <p>{{original_language}}</p>
-        <p>{{vote_average}}</p>
+        <p>{{{original_language}}}</p>
+        <p>{{{vote_average}}}</p>
       <div>
     </script>
 
