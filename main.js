@@ -104,13 +104,14 @@ $(document).ready(function(){
           var vote = Math.floor(vote_average / 2);
           console.log(vote);
           var stars = "";
-          for (var s = 0; s <= 5; s++) {
+          for (var s = 0; s <5; s++) {
             if (s <= vote){
               stars += '<i class="fas fa-star"></i>';
            }else{
               stars += '<i class="far fa-star"></i>';
           }
         }
+        return stars;
       };
 
 
