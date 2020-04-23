@@ -1,13 +1,13 @@
 
 $(document).ready(function(){
 
-  var pages = $(".movie");
+
   var source = document.getElementById("movie-template").innerHTML;
   var template = Handlebars.compile(source);
 
   $('button').click(function(){
 
-
+    var pages = $(".movie");
     pages.html('');
 
     var movie = $("#search");
