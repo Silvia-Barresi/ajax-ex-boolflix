@@ -89,16 +89,18 @@ $(document).ready(function(){
           function flag(original_language) {
 
           var lingue = ['es', 'it', 'en'];
+          var flags;
 
           if (lingue.includes(original_language)) {
 
-            var flag = '<img src=" '+ original_language +' ".png">';
-            return flag;
+            flags = '<img src=" '+ original_language +' .png">';
+            return flags;
+
           } else {
             return original_language;
           }
-
         };
+
 
         function star(vote_average){
           var vote = Math.floor(vote_average / 2);
