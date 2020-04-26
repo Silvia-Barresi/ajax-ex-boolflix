@@ -7,32 +7,35 @@
     <script src="https://kit.fontawesome.com/f544440f57.js" crossorigin="anonymous"></script>
   </head>
   <body>
+    
     <header>
+      <a href="https://fontmeme.com/netflix-font/"><img src="https://fontmeme.com/permalink/200424/8bb64a7cfcfe3c5788f4fbd27d6d8a3d.png" alt="netflix-font" border="0"></a>
       <div class="input">
         <input id="search" type="text" placeholder="scrivi un titolo">
         <button id="button" type="button" name="button">Search</button>
       </div>
     </header>
 
+    <div class="movie_container">
 
+    </div>
 
-
-    <!-- template -->
-
+  <!-- TEMPLATE --------------------------------------------------------------->
     <script id="movie-template" type="text/x-handlebars-template">
-      <div class="movie">
-        <span>{{{poster}}}<span>
-        <h3>{{title}}</h3>
-        <p>{{original_title}}</p>
-        <p>{{{original_language}}}</p>
-        <p>{{{vote_average}}}</p>
-        <p>{{ms}}</p>
-      <div>
+        <div class="movie">
+          <div class="image">
+            <span>{{{poster}}}</span>
+            <span class="tipo">{{ms}}</span>
+          </div>
+          <div class="display">
+            <h3>{{title}}</h3>
+            <p>{{original_title}}</p>
+            <p>{{{original_language}}}</p>
+            <p>{{{vote_average}}}</p>
+            <p>{{overview}}</p>
+          </div>
+        </div>
     </script>
-
-
-
-
 
 
 
