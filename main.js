@@ -74,14 +74,21 @@ $(document).ready(function(){
           overview = "Trama non disponibile";
       }
 
-      // salviamo i dati
+      // mostriamo i poster film/serie altrimenti riposrtiamo il titolo
+      var img = "https://image.tmdb.org/t/p/w342" + watchNow.poster_path;
+        if(watchNow.poster_path === null){
+          poster = '<span class="postertitle">' + title + '</span>' ;
+        }else{
+          poster = '<img src="' + img + '" class="poster">';
+        }
+
       context = {
         title: "Titolo: " + title,
         original_title: "Titolo originale: " + original_title,
         original_language: "Lingua: " + flag(watchNow.original_language),
         vote_average: "Media voto: " + star(watchNow.vote_average),
         overview: "Trama: " + overview,
-        poster: posters(watchNow.poster_path),
+        poster: poster,
         ms: type
       };
 
@@ -154,14 +161,14 @@ $(document).ready(function(){
   };
 
   // mostriamo i poster film/serie
-  function posters(poster_path){
-    var img = "https://image.tmdb.org/t/p/w342" + poster_path;
-    if(poster_path === null){
-      poster = 'Immagine non disponibile';
-    }else{
-      poster = '<img src="' + img + '" class="poster active">';
-    }
-    return poster;
-  };
+  // function posters(poster_path){
+  //   var img = "https://image.tmdb.org/t/p/w342" + poster_path;
+  //   if(poster_path === null){
+  //     poster = 'Immagine non disponibile';
+  //   }else{
+  //     poster = '<img src="' + img + '" class="poster active">';
+  //   }
+  //   return poster;
+  // };
 
 });
