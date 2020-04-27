@@ -70,7 +70,9 @@ $(document).ready(function(){
       // se la trama supera i 300 caratteri, si nasconde dietro le parentesi graffe
       if (watchNow.overview){
           var overview = watchNow.overview.substring (0, 350)+ '[...]';
-      };
+      } else if(watchNow.overview === ""){
+          overview = "Trama non disponibile";
+      }
 
       // salviamo i dati
       context = {
